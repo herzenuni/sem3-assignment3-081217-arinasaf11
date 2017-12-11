@@ -17,7 +17,7 @@ try:
     with open(filename, encoding='utf-8') as data_file:
         json_file = open("data.json", "r")
         f= json_file.read()
-        data = json.loads(cont)
+        data = json.loads(f)
 
 except FileExistsError:
 
@@ -26,7 +26,7 @@ except FileExistsError:
     status = 'Файл не найден'
 
 
-pprint(data)
+pprint.pprint(data)
 
 # Вывести в форматированном виде поля: 
 
