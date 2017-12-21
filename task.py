@@ -1,4 +1,4 @@
-
+#Сафиуллина Арина ИВТ 2 курс
 
 # С помощью какой библиотеки в Python 3 можно работать с JSON файлами?
 
@@ -26,8 +26,17 @@ except FileExistsError:
     status = 'Файл не найден'
 
 
-pprint.pprint(data)
+for index, i in enumerate(data):
+    print('\nData number in the list №', index)
 
-# Вывести в форматированном виде поля: 
+    a = {}
+    a.update(
+	{'address':i.get('address')})
+    pprint.pprint(a)
 
-# company, email, phone, address
+    b = {}
+    b.update(
+        {'company': i.get('company'),
+         'email': i.get('email'),
+         'phone': i.get('phone')})
+    pprint.pprint(b)
